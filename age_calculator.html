@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="age_cal.css">
+</head>
+
+<body>
+<div class="main">
+
+    <div class="container">
+        <div class="contain" id="c">
+            <h3 class="h3">AGE CALCULATOR
+            </h3>
+        </div>
+        <label class="enterdob">Enter Your Date of Birth</label>
+        <input id="inputdate" type="date">
+        <label class="entercurdate">Current Date</label>
+        <input id="currdate" type="date">
+        <div class="bt">
+            <button class="btn" id="resbtn" onclick="getdob()">Calculate</button>
+        </div>
+        <div class="con">
+
+        </div>
+    </div>
+</div>
+    <style>
+        /* html {
+            height: -webkit-fill-available;
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: silver;
+     
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            /* height: -webkit-fill-available; */
+            /* justify-content: center;
+            align-items: center; */
+            border-radius: 2vmin;
+            /* margin-top: 5rem;
+            margin-left: 10rem; */
+            height: 33rem;
+            width: 30rem;
+            background: rgb(155, 0, 155);
+        }
+
+        .contain {
+            text-align: center;
+            height: 3rem;
+            width: 30rem;
+            background: aqua;
+            text-decoration: none;
+            font-size: xx-large;
+            font-weight: bolder;
+            border: none;
+            border-radius: 1vmin;
+        }
+
+        .h3 {
+
+            margin-top: 1rem;
+            color: darkblue;
+        }
+
+        .enterdob {
+            font-weight: bold;
+            font-family: serif;
+            font-size: x-large;
+            margin-left: 23%;
+
+        }
+
+        .entercurdate {
+            
+            font-weight: bold;
+            font-family: serif;
+            font-size: x-large;
+            margin-left: 32%;
+            margin-top: 8rem;
+
+        }
+
+        #inputdate {
+            font-size: xx-large;
+            margin-left: 22%;
+            padding: 5%;
+        }
+
+        #currdate {
+            font-size: xx-large;
+
+            margin-left: 22%;
+            padding: 5%;
+
+        }
+
+        .bt {
+            margin-top: 2rem;
+            height: 2rem;
+            width: 5rem;
+
+            margin-left: 12rem;
+        }
+
+        .btn {
+            padding: 2vmin;
+            border: none;
+            border-radius: 5px;
+            background: greenyellow;
+        }
+
+        .con {
+            margin-left: 5%;
+            margin-top: 4rem;
+            height: 6rem;
+            width: 27rem;
+            background: darkgray;
+            font-size: x-large;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 620px) {
+          
+          .container{
+            /* margin-right: 20px; */
+            width: 24rem;
+          }
+          .contain {
+            text-align: center;
+            height: 3rem;
+            width: 24rem;
+        }
+        .enterdob {
+            margin-left: 17%;
+
+        }
+
+        .entercurdate {
+            margin-left: 25%;
+            margin-top: 8rem;
+
+        }
+
+        #inputdate {
+            font-size: xx-large;
+            margin-left: 17%;
+            padding: 5%;
+        }
+
+        #currdate {
+            font-size: xx-large;
+
+            margin-left: 17%;
+            padding: 5%;
+
+        }
+        .bt {
+            margin-top: 2rem;
+            margin-left: 9.5rem;
+        }
+        
+        .con {
+            margin-left: 2%;
+            margin-top: 4rem;
+            width: 23rem;
+        }
+        }
+        @media only screen and (max-width: 500px) {
+        
+          .container{
+            /* margin-right: 20px; */
+            width: 20rem;
+          }
+          .contain {
+            text-align: center;
+            height: 3rem;
+            width: 20rem;
+            font-size: 28px;
+        }
+        .enterdob {
+            margin-left: 13%;
+
+        }
+
+        .entercurdate {
+            margin-left: 21%;
+            margin-top: 8rem;
+
+        }
+
+        #inputdate {
+            font-size: xx-large;
+            margin-left: 13%;
+            padding: 5%;
+        }
+
+        #currdate {
+            font-size: xx-large;
+
+            margin-left: 13%;
+            padding: 5%;
+
+        }
+        .bt {
+            margin-top: 2rem;
+            margin-left: 7.5rem;
+        }
+        
+        .con {
+            margin-left: 0.3%;
+            margin-top: 4rem;
+            width: 19.8rem;
+        }
+        }
+    </style>
+    <script>
+        function getdob() {
+            let idate = document.querySelector('#inputdate').value;
+            let dob = new Date(idate);
+            let iday = dob.getDate();
+            let imonth = dob.getMonth();
+            let iyear = dob.getFullYear();
+            let cdate = new Date(document.querySelector('#currdate').value);
+            let daydiff = cdate.getDate() - iday;
+            let monthdiff = cdate.getMonth() - imonth;
+            let yeardiff = cdate.getFullYear() - iyear;
+            if (yeardiff < 0) {
+                alert("Invalid Age!");
+            }
+            else if (monthdiff > 0) {
+                console.log(yeardiff)
+            }
+            else if (monthdiff === 0 && daydiff >= 0) {
+                console.log(yeardiff)
+            }
+            else {
+                yeardiff = yeardiff - 1;
+                if (monthdiff <= 0)
+                    if (daydiff > 0) monthdiff = 12 + monthdiff;
+                    else monthdiff = 11 - monthdiff;
+            }
+            if (daydiff < 0) {
+                daydiff = 30 + daydiff;
+                monthdiff -= 1;
+            }
+            if (yeardiff < 0) {
+                document.querySelector('.con').innerHTML = 'Invalid Date!';
+            }
+            else {
+                document.querySelector('.con').innerHTML = "Your Current Age is " + yeardiff + "  years" +
+                    monthdiff + '<br></br>' + " months" + ' and ' + daydiff + ' days'
+            }
+        }
+        function currentdate() {
+            console.log(formatted());
+            let d = document.querySelector('#currdate');
+            d.value = formatted();
+        }
+        function formatted(date = new Date()) {
+            return [
+                date.getFullYear(),
+                now(date.getMonth() + 1),
+                now(date.getDate())
+            ]
+        }
+        let now = (num) => {
+            return num.toString().padStart(0, '2');
+        }
+        currentdate();
+
+
+    </script>
+    <script src="age_cal.js"></script>
+
+</body>
+
+</html>
