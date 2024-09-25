@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+</head>
+
+<style>
+    body{
+        background: silver;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .passg{
+        border: none;
+        border-radius: 1vmin;
+        height: 1.7rem;
+        width: 20rem;
+        background-color: aqua;
+    }
+    .pwgen{
+        border: none;
+        border-radius: 2rem;
+        /* margin-top: 5rem;
+        margin-left: 28rem; */
+        height: 22rem;
+        width: 20rem;
+        background:rgb(155, 0, 155); 
+    }
+    .radbtn{
+        margin-left: 3.2rem;
+    }
+    .radbtn1{
+        margin-top: 2rem;
+        margin-left: 8rem;
+    }
+    .radbtn2{
+        margin-left: 7.6rem;
+    }
+    .radbtn3{
+        margin-left: 6.5rem;
+    }
+    .put{
+        background:skyblue; 
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+    .output{
+        margin-left: 7px;
+        margin-top: 2rem;
+        height: 4rem;
+        width: 19.5rem;
+        font-size: larger;
+        text-align: center;
+        align-items: center;
+        font-weight: bold;
+    }
+    .btn{
+        margin-top: 2rem;
+        border: none;
+        border-radius: 1rem;
+        height: 4rem;
+        width: 6rem;
+        background:greenyellow;
+        color: black;
+        margin-left: 6.7rem;
+        font-weight: bolder;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgb(54, 85, 7);
+        color: white;
+        font-weight: bold;
+    }
+    
+    .pg{
+       color: darkblue;
+       font-weight: bold;
+        margin-top: 2rem;
+        margin-left: 2.9rem;
+    }
+    @media screen and (max-width:1000) {
+        
+    }
+   </style>
+<body>
+    <div class="main">
+   <div class="pwgen">
+   <div class="passg">
+    <h2 class="pg"> Password Generator</h2>
+</div>
+    <h4 class="radbtn">Weak<input type="radio" id="six" name="req" class="radbtn1"></h4>
+   <h4 class="radbtn">Strong<input type="radio" id="eight" name="req" class="radbtn2"></h4>
+   <h4 class="radbtn">Strongest<input type="radio" id="ten" name="req" class="radbtn3"></h4>
+ 
+   <button class="btn"><i>Generate Password</i></button>
+   <br></br>
+   <h1 class="output put" id="output">
+   </h1>
+   </div>
+</div>
+   <script>
+    function gen_pass(){
+    let print = document.querySelector('#output');    
+    let get6 = document.querySelector('#six');
+    let get8 = document.querySelector('#eight');
+    let get10 = document.querySelector('#ten');
+    let btn = document.querySelector('.btn');
+    btn.addEventListener('click',(()=>{
+        if(get6.checked){
+            let pass1 = '';
+            let str1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '0123456789' + '!@#$%^&*+-';
+            for(let i = 0 ;i < 6 ; i++){
+                let char1 = Math.round(Math.random()*str1.length);
+                pass1 += str1.charAt(char1);
+            }
+            print.innerHTML = pass1;
+        }
+    
+        else if(get8.checked){
+            let pass2 = '';
+            let str2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '0123456789' + '!@#$%^&*+-';
+            for(let i = 0 ;i < 8 ; i++){
+                let char2 = Math.round(Math.random()*str2.length);
+                pass2 += str2.charAt(char2);
+            }
+            print.innerHTML = pass2;
+        }   
+        
+        else if(get10.checked){
+            let pass3 = '';
+            let str3 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '0123456789' + '!@#$%^&*+-';
+            for(let i = 0 ;i < 10 ; i++){
+                let char3 = Math.round(Math.random()*str3.length);
+                pass3 += str3.charAt(char3);
+            }
+            print.innerHTML = pass3;
+        }
+        else{
+            print.innerHTML = 'Must Select Password Type'
+        }
+    }))
+}
+    gen_pass()
+
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <!-- <link rel="stylesheet" href="clock.css"> -->
+</head>
+   <body>
+  <div class="clock"></div>
+  <!--  <button id="tab" class="btn">Table</button> -->
+<!-- <div id="blb" class="bulb bulb-container" ></div> -->
+    <!-- <nav> -->
+        <!-- <ul>
+           <li class="fb">Facebook</li>
+           <a href="https://www.Instagram.com"> <li>Instagram</li></a>
+           <a href="https://www.Twitter.com"> <li>Twitter</li></a>
+           <a href="https://www.LinkedIn.com"> <li>LinkedIn</li></a>
+      
+        </ul>
+    </nav>
+    <button class="btns" onclick="alert('This is first button')"></button>
+    <button class="btns" onclick="alert('This is 2nd button')"></button>
+    <button class="btns" onclick="alert('This is 3rd button')"></button>    
+    <button class="btns" onclick="alert('This is 4th button')"></button> --> 
+<!-- <button id="edit" class="btns" >Edit</button>
+<button id="del" class="btns">Delete</button>
+<button id="next" class="btns">Next</button>
+<button id="pre" class="btns">Previous</button>  -->
+<style>
+    
+body{
+    align-items: center;
+    background-color:silver;
+   text-align: center;
+   display: flex;
+}
+.clock{
+    font-size: 15vmin;
+    font-weight: bold;
+    color: red;
+    border: none;
+    background-color: rgb(4, 4, 102);
+    border-radius: 05vmin;
+    height: 23vmin;
+    width: 90vmin;
+    display: block;
+    margin: 30px auto;
+}
+</style>
+<script>
+    function getclock(){
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+   var session  = 'AM'
+   if(hours >=12){
+    session = 'PM';
+    }
+   if(hours >12){
+        hours = hours-12;
+    }
+    hours = hours<10? '0' + hours : hours;
+    minutes = minutes<10? '0' + minutes : minutes;
+    seconds = seconds<10? '0' + seconds : seconds;
+
+let display = hours + ':' + minutes + ':' + seconds + ' ' + session ;
+document.querySelector('.clock').innerHTML = display;
+setTimeout(getclock,1000)
+}
+
+getclock();
+</script>
+    <!-- <script src="Clock.js"></script> -->
+</body>
+</html>

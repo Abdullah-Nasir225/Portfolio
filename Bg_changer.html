@@ -1,0 +1,146 @@
+<!-- Bg_changer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+ <!-- <div class="box" id="ele1">Element 1</div>
+   <div class="box" id="ele2">Element 2 <span id="sp1">SP1</span></div>
+-->
+<!-- <nav>
+    <li>Home</li>
+    <li>About</li>
+    <li>Portfolio</li>
+    <li>My work</li>
+</nav>
+<table>
+    <td>
+        <tr>1</tr>
+        <tr>2</tr>
+        <tr>3</tr>
+    </td>
+</table>
+ --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <div class="entire">
+ <div id="back" class="bgcc back">
+<i class="i">Background Colour Changer</i>
+ </div>
+
+<div class="container">
+    <div class="con">
+    <button id="btn" class="red"></button>
+    <button id="btn" class="green"></button>
+    <button id="btn" class="pink"></button>
+    <button id="btn" class="blue"></button>
+
+</div>
+
+</div>
+</div>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 50vmin;
+    width: 50vmin;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.con{
+    margin-top: 40vmin;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 15vmin;
+    width: 40vmin;
+    background-color: whitesmoke;
+    border-radius: 20vmin;
+  
+}
+#btn{
+    align-items: center;
+    margin: 1px 10px;
+ 
+    height: 20px;
+    width: 20px;
+    border-radius: 30vmin;
+    border: none;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: aqua;
+}
+.pink{
+    background-color: pink;
+}
+.i{
+    font-size: x-large;
+    font-weight: bold;
+}
+.bgcc{
+    text-align: center;
+    color: maroon;
+    border-radius:6px;   
+ 
+    height:3rem;
+    width: 20rem;
+}
+.entire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back{
+background-color: gold;
+}
+@media screen and (max-width: 810px) {
+.container {
+    height: 100vmin;
+}
+}
+</style>
+<script>
+let r = document.querySelector('.red');
+let b = document.querySelector('.blue');
+let g = document.querySelector('.green');
+let p = document.querySelector('.pink');
+r.addEventListener('click',function(){
+    document.body.style.backgroundColor = 'red';
+})
+b.addEventListener('click',function(){
+    document.body.style.backgroundColor = 'aqua';
+})
+g.addEventListener('click',function(){
+    document.body.style.backgroundColor = 'green';
+})
+p.addEventListener('click',function(){
+    document.body.style.backgroundColor = 'pink';
+})
+setInterval(() => {
+    document.querySelector('#back').classList.toggle("back")
+    
+}, 1000);
+
+</script>
+
+   <script src="script2.js"></script>
+</body>
+</html>

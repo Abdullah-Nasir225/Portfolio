@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        height: 15rem;
+        width: 15rem;
+        background-color: rgb(24, 23, 23);
+        border-radius: 1.5vmin;
+
+    }
+
+    .contain {
+        height: 9rem;
+        width: 9rem;
+        border-style: solid;
+        border-width: 8px;
+        background-color: rgb(0, 0, 0);
+        border-color: rgb(1, 190, 247);
+        position: absolute;
+        margin: 1.5rem 2.5rem;
+        border-radius: 10rem;
+        color: aqua;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .resetbtn {
+        background-color: rgb(0, 0, 0);
+        border-color: rgb(1, 190, 247);
+        border-width: 4px;
+        border-style: solid;
+        position: absolute;
+        color: rgb(1, 190, 247);
+        height: 3rem;
+        width: 3rem;
+        font-size: 12px;
+        font-weight: bolder;
+        margin-left: 1px;
+        margin-top: 12rem;
+        border-radius: 1.5vmin;
+    }
+
+    .plusbtn {
+        background-color: rgb(0, 0, 0);
+        border-color: rgb(1, 190, 247);
+        border-width: 4px;
+        border-style: solid;
+        position: absolute;
+        font-size: xx-large;
+        font-weight: bolder;
+        color: rgb(1, 190, 247);
+        float: right;
+        height: 3rem;
+        width: 3rem;
+        margin-left: 12rem;
+        margin-top: 12rem;
+        border-radius: 1.5vmin;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="contain">
+                0
+            </div>
+            <button class="resetbtn" id="reset">Reset</button>
+            <button class="plusbtn" id="plus">+</button>
+        </div>
+    </div>
+    <script>
+        const counter = () => {
+            let plus = document.querySelector('#plus')
+            plus.addEventListener('click', (() => {
+                let val = document.querySelector('.contain').innerHTML;
+                val = Number.parseInt(val)
+                val = val + 1;
+                val = (val < 10) ? "0" + val : val;
+                document.querySelector('.contain').innerHTML = val;
+
+
+            }))
+
+            let rest = document.querySelector('#reset')
+            rest.addEventListener('click', (() => {
+                document.querySelector('.contain').innerHTML = 0;
+            }))
+        }
+        counter();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="projects.css"> -->
+</head>
+<body>
+    <div class="msg-container hide">
+        <i class="msg">Winner</i>
+    </div>
+    <button id="new">New Game</button>
+    <main>
+        <h2>Tic Tac Toe</h2>
+        <div class="container">
+            <div class="game">
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+</div>
+        </div>
+        <button class="reset">Reset</button>
+    </main>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    justify-content: center;
+    text-align: center;
+    background: silver;
+}
+.container{
+    height: 70vh;
+    justify-content: center;
+ align-items: center;
+ display: flex;
+}
+.game{
+    height:60vmin ;
+    width:60vmin ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 100px; 
+    width: 100px;
+    border-radius: 1rem;
+    border: none;
+    font-size: 70px;
+background-color: antiquewhite;
+color: darkred;
+}
+.reset{
+    height: 30px;
+    width: 90px;
+    background-color: rgb(5, 5, 163);
+    border: none;
+    border-radius:1rem ;
+color: aqua;
+font-size: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#new{
+    
+    height: 30px;
+    width: 90px;
+    background-color: rgb(87, 220, 253);
+    border: none;
+    border-radius:1rem ;
+color: rgb(252, 92, 0);
+font-size: 15px;
+font-weight: bold;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.msg{
+    color: rgba(0, 70, 15, 0.87);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: x-large;
+    font-weight: bold;
+}
+.msg-container{
+    margin-bottom: 30vmin;
+}
+.hide{
+    display: none;
+}
+    </style>
+    <script>
+        let boxes = document.querySelectorAll('.box');
+let reset = document.querySelector('.reset');
+let msgcon = document.querySelector('.msg-container');
+let itag = document.querySelector('.msg');
+let newgamebtn = document.querySelector('#new');
+let turnO = true;
+let winpattern = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+];
+const resetgame = () =>{
+     turnO = true;
+     enabledboxes();
+    msgcon.classList.add('hide');
+   
+    }
+boxes.forEach((a)=>{
+a.addEventListener('click',()=>{
+if(turnO){
+    a.innerHTML = 'o';
+    turnO = false;
+}
+else{
+a.innerHTML = 'x';
+turnO  = true;
+}
+a.disabled = true;
+checkwinner();
+})
+})
+
+const disabledboxes = () =>{
+for(let i of boxes){
+i.disabled = true;
+}
+}
+
+const enabledboxes = () =>{
+for(i of boxes){
+i.disabled = false;
+i.innerText = '';
+
+}
+
+}
+
+
+const showinner = (winner) =>{
+itag.innerText = `Congratulation The winner is ${winner}`;
+msgcon.classList.remove('hide');
+disabledboxes();
+}
+
+
+const checkwinner = (()=>{
+for(let i of winpattern){
+    // console.log(i[0],i[1],i[2])
+// console.log(boxes[i[0]],boxes[i[1]],boxes[i[2]])
+
+let val1 = boxes[i[0]].innerText;
+
+let val2 = boxes[i[1]].innerText;
+let val3 = boxes[i[2]].innerText;
+if(val1 != '' && val2 != '' && val3 != '' ){
+    if(val1 === val2 && val2 === val3){
+   console.log("The winner is",val1)
+    showinner(val1);
+
+
+    }
+}
+}
+})
+reset.addEventListener('click',resetgame)
+newgamebtn.addEventListener('click',resetgame);
+
+    </script>
+    <!-- <script src="projects.js"></script> -->
+</body>
+</html>
