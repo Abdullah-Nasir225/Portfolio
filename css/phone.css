@@ -278,93 +278,93 @@ width: 320px;
     font-size: 14px;
   } */
 /* Social media icons */
-  .social-buttons {
-    display: flex;
-    position: relative;
-    top: 101rem;
-    left: 5rem;
-    /* margin-top: 50rem; */
-    justify-content: center;
-    align-items: center;
-    background-color: #171717;
-    /* box-shadow: 0px 0px 15px #00000027; */
-    padding: 15px 10px;
-    width: 10rem;
-    height: 1rem;
-    border-radius: 5em;
-  }
-  
-  .social-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 4px #00000027;
-    transition: 0.3s;
-  }
-  .social-button:hover {
-    background-color: #f2f2f2;
-    box-shadow: 0px 0px 6px 3px #00000027;
-  }
-  
-  .social-buttons svg {
-    transition: 0.3s;
-    height: 20px;
-  }
-  
-  .facebook {
-    background-color: #3b5998;
-  }
-  
-  .facebook svg {
-    fill: #f2f2f2;
-  }
-  
-  .facebook:hover svg {
-    fill: #3b5998;
-  }
-  
-  .github {
-    background-color: #333;
-  }
-  
-  .github svg {
-    width: 20px;
-    height: 20px;
-    fill: #f2f2f2;
-  }
-  
-  .github:hover svg {
-    fill: #333;
-  }
-  
-  .linkedin {
-    background-color: #0077b5;
-  }
-  
-  .linkedin svg {
-    fill: #f2f2f2;
-  }
-  
-  .linkedin:hover svg {
-    fill: #0077b5;
-  }
-  
-  .instagram {
-    background-color: #c13584;
-  }
-  
-  .instagram svg {
-    fill: #f2f2f2;
-  }
-  
-  .instagram:hover svg {
-    fill: #c13584;
-  }
+.social-buttons {
+  margin-top: 101rem;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 15px 10px;
+  border-radius: 5em;
+  height: 20px;
+  width: 200px;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
   .foot p:nth-child(2){
     /* position: absolute;
     top:10rem;
