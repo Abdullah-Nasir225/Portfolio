@@ -1,13 +1,7 @@
 /* Mobile */
 @media screen and (max-width:430px) {
- 
-    .header{
-     /* background-color:rgb(145, 144, 144); */
-     background-color: rgb(123, 124, 124);
-     height: 326px;
-     width: 400px;
-    }
-    nav ul {
+  
+    /* nav ul {
      display: flex;
      flex-direction: column;
      flex-wrap: wrap;
@@ -17,32 +11,36 @@
      list-style: none;
      margin: 1px 10px;
      font-weight: bolder;
- }
+ } */
  .left p {
     cursor: pointer;
     font-size: 10px;
 }
-nav ul li a{
+/* nav ul li a{
     font-size: 12px;
 }
  .right {
          display: block;
          width: 280px;
          position: absolute;
-         left: 220px;
+         left: 15rem;
          top: 1px;
-     
-     }          
- header::before{
-     height: 35%;
+      font-size: 15px;
+     }           */
+
+
+
+
+     header::before{
+     height: 30%;
      width: 50%;
      position: absolute;
-     left: 100px;
-     top: 90px;
+     left: 8rem;
+     top: 0rem;
  }
  .sidebox{
     position: relative;
-    top: 1px;
+    top: 50px;
     height: 30px;
     width: 115px;
 }
@@ -54,16 +52,17 @@ nav ul li a{
 .sidebox p{
     font-size: 10px;   
 }
- .marquee{
-     top: 250px;
-     font-size: 5rem;
- }
+marquee{
+display: none;
+}
  /* About section */
  .about-div{
     display: flex;
     /* background-color: orange; */
     height: 500px;
     flex-direction: column;
+    margin: auto;
+    align-items: center;
    
 }
  .about-text{
@@ -74,7 +73,7 @@ nav ul li a{
     margin-top: 20px;
     height: 250px;
     width: 280px;
-    left: 10px;
+    left: 50px;
     flex-wrap: wrap;
     /* background-color: blue; */
     justify-content: center;    
@@ -278,92 +277,6 @@ width: 320px;
     font-size: 14px;
   } */
 /* Social media icons */
-.social-buttons {
-  margin-top: 101rem;
-  margin-left: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  box-shadow: 0px 0px 15px #00000027;
-  padding: 15px 10px;
-  border-radius: 5em;
-  height: 20px;
-  width: 200px;
-}
-
-.social-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 0 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px #00000027;
-  transition: 0.3s;
-}
-
-.social-button:hover {
-  background-color: #f2f2f2;
-  box-shadow: 0px 0px 6px 3px #00000027;
-}
-
-.social-buttons svg {
-  transition: 0.3s;
-  height: 20px;
-}
-
-.facebook {
-  background-color: #3b5998;
-}
-
-.facebook svg {
-  fill: #f2f2f2;
-}
-
-.facebook:hover svg {
-  fill: #3b5998;
-}
-
-.github {
-  background-color: #333;
-}
-
-.github svg {
-  width: 25px;
-  height: 25px;
-  fill: #f2f2f2;
-}
-
-.github:hover svg {
-  fill: #333;
-}
-
-.linkedin {
-  background-color: #0077b5;
-}
-
-.linkedin svg {
-  fill: #f2f2f2;
-}
-
-.linkedin:hover svg {
-  fill: #0077b5;
-}
-
-.instagram {
-  background-color: #c13584;
-}
-
-.instagram svg {
-  fill: #f2f2f2;
-}
-
-.instagram:hover svg {
-  fill: #c13584;
-}
 
   .foot p:nth-child(2){
     /* position: absolute;

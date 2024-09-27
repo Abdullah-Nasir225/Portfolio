@@ -1,15 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
+body{
+  margin: 0;
+  padding: 0;
 }
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 /* Header Section */
 .header {
-    height: 659px;
+    height: 609px;
     background-color: rgb(123, 124, 124);
-
 }
 
 .left {
@@ -59,9 +58,10 @@ html{
 }
 
 
-.right {
+/* .right {
     display: inline-block;
     width: 280px;
+    background-color: orange;
     position: absolute;
     left: 1040px;
     top: 5px;
@@ -115,7 +115,8 @@ nav ul li:hover {
             font-weight: bolder;
     }
 
-}
+} */
+
 /* MY PICTURE */
 
 header::before{
@@ -129,16 +130,15 @@ header::before{
     left: 550px;
     top: 20px;
 }
-.marquee{
-    position: relative;
-    top: 470px;
-    font-family: "Gideon Roman", serif;
-    font-size: 10rem;
-}
 marquee{
-  color: rgb(26, 24, 24);
-  filter:drop-shadow(2px 2px 10px white)
-}
+    position: relative;
+    top: 320px;
+    /* font-family: "Gideon Roman", serif; */
+    font-size: 10rem;
+    color: rgb(26, 24, 24);
+    /* filter:drop-shadow(2px 2px 10px white)
+   */
+  }
 .sidebox{
     display: flex;
     position: absolute;
@@ -157,22 +157,6 @@ marquee{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* .circle{
-    margin: 25px 25px;
-    text-align: center;
-    border: 2px solid aqua;
-    height: 30px;
-    width: 30px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: gray;
-    transition-property: all;
-    transition-duration: 2s;
-    transition-timing-function: ease-out;
-}
-.circle:hover{
-    transform: rotate(360deg);
-} */
 #svg-spinners--wind-toy {
   display: inline-block;
   width: 37px;
@@ -194,7 +178,7 @@ marquee{
 }
 /* Home media Queries */
 /* Nest Hub Max */
-@media screen and (max-width:1280px) {
+/* @media screen and (max-width:1280px) {
    .header{
     background-color: blue;
     height: 650px;
@@ -234,9 +218,9 @@ header::before{
     font-size: 7rem;
   
   }
-}
+} */
 /* Nest Hub */
-@media screen and (max-width:1030px) {
+/* @media screen and (max-width:1030px) {
    .header{
     background-color: green;
     height: 470px;
@@ -270,7 +254,7 @@ header::before{
     top: 370px;
     font-size: 5rem;
 }
-}
+} */
 /* About Section */
 
 .about{
@@ -281,46 +265,6 @@ header::before{
     flex-wrap:wrap ;
     height: 200px;
 }
-/* .about-circle{
-    height: 150px;
-    width: 150px;
-    border-radius: 100px;
-    background-color: black;
-    text-align: center;
-    padding: 5px 5px;
-    cursor: pointer;
-}
-.about-circle:hover{
-    animation-name: about-ani;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-iteration-count: inherit;
-    animation-timing-function: ease-in-out;
-    transition: all 1s;
-    transform: rotate(360deg);
-    background-color:rgb(56, 172, 56);
-}
-@keyframes about-ani{
-    30%{
-        margin-left: 160px;
-    }
-    
-    60%{
-        margin-right: 170px;
-    }
-    90%{
-        margin-left: 180px;
-    }
-    100%{
-        margin-left: 190px;
-    }
-
-}
-.about-circle p{
-    margin-top: 4rem;
-    font-size: 1rem;
-    font-weight: bolder;
-} */
 .btn-81,
 .btn-81 *,
 .btn-81 :after,
@@ -478,7 +422,7 @@ transparent;
 
 .about-text p{
     color: black;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Kanit", sans-serif;
 }
 .about-imgdiv{
@@ -1050,7 +994,6 @@ border-radius: 20px;
   justify-content: center;
   align-items: center;
   flex-wrap:wrap ;
-  /* background-color: orange; */
   height: 150px;
   margin-top: 75rem;
   left: 60rem;
@@ -1070,94 +1013,6 @@ border-radius: 20px;
   font-weight: bold;
   
 }
-/* Social Media Icons */
-.social-buttons {
-  margin-top: 59rem;
-  margin-left: 64rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  box-shadow: 0px 0px 15px #00000027;
-  padding: 15px 10px;
-  border-radius: 5em;
-  height: 20px;
-  width: 200px;
-}
-
-.social-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 0 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px #00000027;
-  transition: 0.3s;
-}
-
-.social-button:hover {
-  background-color: #f2f2f2;
-  box-shadow: 0px 0px 6px 3px #00000027;
-}
-
-.social-buttons svg {
-  transition: 0.3s;
-  height: 20px;
-}
-
-.facebook {
-  background-color: #3b5998;
-}
-
-.facebook svg {
-  fill: #f2f2f2;
-}
-
-.facebook:hover svg {
-  fill: #3b5998;
-}
-
-.github {
-  background-color: #333;
-}
-
-.github svg {
-  width: 25px;
-  height: 25px;
-  fill: #f2f2f2;
-}
-
-.github:hover svg {
-  fill: #333;
-}
-
-.linkedin {
-  background-color: #0077b5;
-}
-
-.linkedin svg {
-  fill: #f2f2f2;
-}
-
-.linkedin:hover svg {
-  fill: #0077b5;
-}
-
-.instagram {
-  background-color: #c13584;
-}
-
-.instagram svg {
-  fill: #f2f2f2;
-}
-
-.instagram:hover svg {
-  fill: #c13584;
-}
-
 
 
 
