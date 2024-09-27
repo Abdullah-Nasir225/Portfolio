@@ -87,3 +87,12 @@
               document.querySelector('#contact').classList.remove('hidden');
             }
 
+   // Get the hamburger icon and the nav links
+   const menuIcon = document.getElementById('menu-icon');
+   const navLinks = document.getElementById('nav-links');
+   
+   // Add an event listener to toggle the menu on click
+   menuIcon.addEventListener('click', () => {
+     navLinks.classList.toggle('active');
+   });
+  
